@@ -17,13 +17,27 @@ public class Assignment {
             return no;
         }
     }
+    public static int greatest(int nu, int no, int mo) {
+        if (nu > no && nu > mo) {
+            return nu;
+        } else if (no > nu && no > mo) {
+            return no;
+        } else if (mo > no && mo > nu) {
+            return mo;
+        }else{
+            return nu;
+        }
+
+    }
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Input two numbers, please..");
+        System.out.println("Input three numbers, please..");
         int RT = reader.nextInt();
         int TR = reader.nextInt();
-        int answer = least(RT,TR);
-        System.out.println("Least: " + answer);
+        int TRT = reader.nextInt();
+        int answer =  greatest(RT, TR, TRT);
+        System.out.println("Greatest: " + answer);
     }
 }
+
